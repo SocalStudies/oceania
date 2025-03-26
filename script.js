@@ -1,55 +1,52 @@
+let countries = [];
+let currentCountry;
 let score = 0;
-let timeLeft = 60;
-let targetCountry = "";
-let countries = {};
+let time = 0;
 
+// Load country data and flag images
 fetch('countries.json')
     .then(response => response.json())
     .then(data => {
         countries = data;
-        generateMap();
-        pickCountry();
-        startTimer();
+        startGame();
     });
 
-function generateMap() {
-    const svg = document.getElementById("map");
-    for (let country in countries) {
-        let circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-        circle.setAttribute("cx", countries[country].x);
-        circle.setAttribute("cy", countries[country].y);
-        circle.setAttribute("r", 20);
-        circle.setAttribute("class", "country");
-        circle.setAttribute("data-name", country);
-        circle.addEventListener("click", checkAnswer);
-        svg.appendChild(circle);
-    }
-}
-
-function pickCountry() {
-    let keys = Object.keys(countries);
-    targetCountry = keys[Math.floor(Math.random() * keys.length)];
-    document.getElementById("flag").src = countries[targetCountry].flag;
-}
-
-function checkAnswer(event) {
-    if (event.target.getAttribute("data-name") === targetCountry) {
-        event.target.setAttribute("class", "correct");
-        score++;
-        document.getElementById("score").innerText = score;
-    } else {
-        event.target.setAttribute("class", "incorrect");
-    }
-    pickCountry();
-}
-
-function startTimer() {
-    let timer = setInterval(() => {
-        timeLeft--;
-        document.getElementById("timer").innerText = timeLeft;
-        if (timeLeft <= 0) {
-            clearInterval(timer);
-            alert("Time's up! Your final score: " + score);
-        }
+function startGame() {
+    setInterval(() => {
+        time++;
+        document.getElementById("timer").textContent = time;
     }, 1000);
+
+    selectRandomCountry();
 }
+
+function selectRandomCountry() {
+    let randomIndex = Math.floor(Math.random() * countries.length);
+    currentCountry = countries[randomIndex];
+
+    document.getElementById("flag").src = currentCountry.flag;
+}
+
+function checkAnswer(countryName) {
+    if (countryName === currentCountry.name) {
+        score++;
+        document.getElementById("score").textContent = score;
+        selectRandomCountry();
+    }
+}
+
+// Render map and make countries clickable
+function renderMap() {
+    let map = document.getElementById("map");
+    
+    countries.forEach(country => {
+        let circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+        circle.setAttribute("cx", country.x);
+        circle.setAttribute("cy", country.y);
+        circle.setAttribute("r", "5"); // Smaller circles
+        circle.addEventListener("click", () => checkAnswer(country.name));
+        map.appendChild(circle);
+    });
+}
+
+document.addEventListener("DOMContentLoaded", renderMap);
