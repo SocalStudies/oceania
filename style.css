@@ -3,6 +3,20 @@ body {
     text-align: center;
 }
 
+#flag-container {
+    margin-top: 20px;
+}
+
+#flag {
+    width: 100px;
+    height: auto;
+}
+
+#country-name {
+    margin-top: 5px;
+    font-weight: bold;
+}
+
 #map-container {
     display: flex;
     justify-content: center;
