@@ -1,17 +1,92 @@
 [
-    {"name": "Antarctica", "x": 300, "y": 350, "flag": "flags/antarctica.png"},
-    {"name": "Australia", "x": 250, "y": 280, "flag": "flags/australia.png"},
-    {"name": "Fiji", "x": 400, "y": 200, "flag": "flags/fiji.png"},
-    {"name": "Kiribati", "x": 450, "y": 180, "flag": "flags/kiribati.png"},
-    {"name": "Marshall Islands", "x": 500, "y": 160, "flag": "flags/marshall_islands.png"},
-    {"name": "Micronesia", "x": 520, "y": 150, "flag": "flags/micronesia.png"},
-    {"name": "Nauru", "x": 480, "y": 190, "flag": "flags/nauru.png"},
-    {"name": "New Zealand", "x": 270, "y": 350, "flag": "flags/new_zealand.png"},
-    {"name": "Palau", "x": 530, "y": 140, "flag": "flags/palau.png"},
-    {"name": "Papua New Guinea", "x": 300, "y": 230, "flag": "flags/papua_new_guinea.png"},
-    {"name": "Samoa", "x": 370, "y": 190, "flag": "flags/samoa.png"},
-    {"name": "Solomon Islands", "x": 330, "y": 220, "flag": "flags/solomon_islands.png"},
-    {"name": "Tonga", "x": 390, "y": 210, "flag": "flags/tonga.png"},
-    {"name": "Tuvalu", "x": 460, "y": 170, "flag": "flags/tuvalu.png"},
-    {"name": "Vanuatu", "x": 340, "y": 240, "flag": "flags/vanuatu.png"}
+    {
+        "name": "Antarctica",
+        "x": 300,
+        "y": 350,
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/8/83/Flag_of_Antarctica.svg"
+    },
+    {
+        "name": "Australia",
+        "x": 250,
+        "y": 280,
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Flag_of_Australia.svg"
+    },
+    {
+        "name": "Fiji",
+        "x": 400,
+        "y": 200,
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Flag_of_Fiji.svg"
+    },
+    {
+        "name": "Kiribati",
+        "x": 450,
+        "y": 180,
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Flag_of_Kiribati.svg"
+    },
+    {
+        "name": "Marshall Islands",
+        "x": 500,
+        "y": 160,
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Flag_of_the_Marshall_Islands.svg"
+    },
+    {
+        "name": "Micronesia",
+        "x": 520,
+        "y": 150,
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/7/76/Flag_of_the_Federated_States_of_Micronesia.svg"
+    },
+    {
+        "name": "Nauru",
+        "x": 480,
+        "y": 190,
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/1/18/Flag_of_Nauru.svg"
+    },
+    {
+        "name": "New Zealand",
+        "x": 270,
+        "y": 350,
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Flag_of_New_Zealand.svg"
+    },
+    {
+        "name": "Palau",
+        "x": 530,
+        "y": 140,
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/4/47/Flag_of_Palau.svg"
+    },
+    {
+        "name": "Papua New Guinea",
+        "x": 300,
+        "y": 230,
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/2/29/Flag_of_Papua_New_Guinea.svg"
+    },
+    {
+        "name": "Samoa",
+        "x": 370,
+        "y": 190,
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/6/64/Flag_of_Samoa.svg"
+    },
+    {
+        "name": "Solomon Islands",
+        "x": 330,
+        "y": 220,
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Flag_of_the_Solomon_Islands.svg"
+    },
+    {
+        "name": "Tonga",
+        "x": 390,
+        "y": 210,
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/9/97/Flag_of_Tonga.svg"
+    },
+    {
+        "name": "Tuvalu",
+        "x": 460,
+        "y": 170,
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Flag_of_Tuvalu.svg"
+    },
+    {
+        "name": "Vanuatu",
+        "x": 340,
+        "y": 240,
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Flag_of_Vanuatu.svg"
+    }
 ]
