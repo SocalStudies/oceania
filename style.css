@@ -23,12 +23,16 @@ body {
     margin-top: 20px;
 }
 
+#map {
+    border: 2px solid black;
+}
+
 circle {
     fill: red;
     stroke: black;
     stroke-width: 1px;
     cursor: pointer;
-    r: 5px; /* Smaller clickable circles */
+    r: 8px; /* Slightly larger clickable circles for better visibility */
 }
 
 circle:hover {

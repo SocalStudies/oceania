@@ -10,6 +10,7 @@ fetch('countries.json')
     .then(response => response.json())
     .then(data => {
         countries = data;
+        renderMap(); // Render map as soon as countries data is loaded
     });
 
 document.getElementById('start-button').addEventListener('click', startGame);
@@ -80,15 +81,18 @@ function checkAnswer(countryName) {
 // Render map and make countries clickable
 function renderMap() {
     let map = document.getElementById("map");
+    map.innerHTML = ''; // Clear any previous map rendering
     
     countries.forEach(country => {
         let circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
         circle.setAttribute("cx", country.x);
         circle.setAttribute("cy", country.y);
-        circle.setAttribute("r", "5"); // Smaller circles
+        circle.setAttribute("r", "8"); // Slightly larger clickable circles
         circle.addEventListener("click", () => checkAnswer(country.name));
         map.appendChild(circle);
     });
 }
 
-document.addEventListener("DOMContentLoaded", renderMap);
+document.addEventListener("DOMContentLoaded", () => {
+    renderMap();
+});
