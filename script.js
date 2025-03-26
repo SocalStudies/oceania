@@ -2,21 +2,61 @@ let countries = [];
 let currentCountry;
 let score = 0;
 let time = 0;
+let timerInterval;
+let isGameActive = false;
 
 // Load country data and flag images
 fetch('countries.json')
     .then(response => response.json())
     .then(data => {
         countries = data;
-        startGame();
     });
 
-function startGame() {
-    setInterval(() => {
-        time++;
-        document.getElementById("timer").textContent = time;
-    }, 1000);
+document.getElementById('start-button').addEventListener('click', startGame);
+document.getElementById('restart-button').addEventListener('click', restartGame);
+document.getElementById('play-again-button').addEventListener('click', startGame);
 
+function startGame() {
+    if (!isGameActive) {
+        isGameActive = true;
+        score = 0;
+        time = 0;
+        document.getElementById('score').textContent = score;
+        document.getElementById('timer').textContent = time;
+        
+        // Show/hide buttons
+        document.getElementById('start-button').style.display = 'none';
+        document.getElementById('restart-button').style.display = 'inline-block';
+        document.getElementById('play-again-button').style.display = 'none';
+        
+        // Start timer
+        timerInterval = setInterval(() => {
+            time++;
+            document.getElementById('timer').textContent = time;
+        }, 1000);
+
+        selectRandomCountry();
+    }
+}
+
+function restartGame() {
+    // Restart the game
+    score = 0;
+    time = 0;
+    document.getElementById('score').textContent = score;
+    document.getElementById('timer').textContent = time;
+    
+    clearInterval(timerInterval);
+    startGame();
+}
+
+function playAgain() {
+    // Show the play again button and reset score
+    score = 0;
+    time = 0;
+    document.getElementById('score').textContent = score;
+    document.getElementById('timer').textContent = time;
+    
     selectRandomCountry();
 }
 

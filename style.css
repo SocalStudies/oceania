@@ -34,3 +34,19 @@ circle {
 circle:hover {
     fill: blue;
 }
+
+/* Buttons styling */
+#buttons-container {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #ccc;
+}
