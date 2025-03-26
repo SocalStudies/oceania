@@ -1,24 +1,22 @@
 body {
-    text-align: center;
     font-family: Arial, sans-serif;
+    text-align: center;
 }
 
 #map-container {
-    position: relative;
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
 }
 
-.country {
-    fill: lightgray;
+circle {
+    fill: red;
     stroke: black;
     stroke-width: 1px;
     cursor: pointer;
+    r: 5px; /* Smaller clickable circles */
 }
 
-.correct {
-    fill: green;
-}
-
-.incorrect {
-    fill: red;
+circle:hover {
+    fill: blue;
 }
