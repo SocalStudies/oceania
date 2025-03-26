@@ -24,7 +24,9 @@ function selectRandomCountry() {
     let randomIndex = Math.floor(Math.random() * countries.length);
     currentCountry = countries[randomIndex];
 
+    // Display flag and name
     document.getElementById("flag").src = currentCountry.flag;
+    document.getElementById("country-name").textContent = currentCountry.name;
 }
 
 function checkAnswer(countryName) {
