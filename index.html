@@ -9,12 +9,20 @@
 <body>
     <h1>Oceania & Antarctica Map Quiz</h1>
     <p>Click the country that matches the flag shown</p>
-    <img id="flag" src="" alt="Country Flag" width="100">
+    
+    <!-- Flag Section -->
+    <div id="flag-container">
+        <img id="flag" src="" alt="Country Flag" width="100">
+        <p id="country-name"></p>
+    </div>
+
     <p>Score: <span id="score">0</span></p>
     <p>Time: <span id="timer">0</span> seconds</p>
+    
     <div id="map-container">
         <svg id="map" width="600" height="400"></svg>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
