@@ -1,0 +1,24 @@
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+#map-container {
+    position: relative;
+    display: inline-block;
+}
+
+.country {
+    fill: lightgray;
+    stroke: black;
+    stroke-width: 1px;
+    cursor: pointer;
+}
+
+.correct {
+    fill: green;
+}
+
+.incorrect {
+    fill: red;
+}
